@@ -119,3 +119,25 @@ Route::delete('/users/{id}', 'UserController@destroy');
 php artisan make:controller UserController
 ```
 
+コントローラファイルを作成し、指示通り実装内容をコピペする。
+
+### ステップ7: ビューの作成
+
+このステップでbladeのビューテンプレートを作成する作業となるが、今回作りたいのはapiだけなのでhtmlテンプレートであるviewはいらないはずでは？
+怪しくなってきた。
+
+### ステップ8: データベースマイグレーションの作成
+
+```
+php artisan make:migration create_users_table --create=users
+```
+
+またusersテーブルを作らされるのか？内容が破綻している。
+
+### 打ち切り
+
+先の実装を見てもREST APIを実装する内容にもなっていないのでここで打ち切りにする。
+
+ただ、`Laravel Passport`というモジュールを使うことによってOAuth2の仕組みを使えるという情報は得たので、別プロジェクトで独自に調べて機能要件を満たす実装を行なっていく。
+
+以上
